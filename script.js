@@ -68,6 +68,7 @@ for (let item of gridItems) {
             }
             if (isDraw) {
                 alert("Draw!!")
+                gameIsFinished = true
             }
         }
 
