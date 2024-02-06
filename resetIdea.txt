@@ -1,0 +1,51 @@
+this is the last version of reset and its not working so idecaide to creat it later ... 
+
+java script reset code :
+document.getElementById("reset-btn").addEventListener("click", function () {
+    
+    gameIsFinished = false
+    currentTurn = "x"
+    document.getElementById("text-turn").boxContent = `${currentTurn} turn`
+
+
+    for (item of gridArray) {
+        let value = item.getAttribute("value")
+        let boxContent = document.querySelector(`.box[value="${value}"]`)
+        boxContent.innerHTML = ""
+
+    }
+
+    //logical viwe
+    gridArray = [
+        "0", "1", "2",
+        "3", "4", "5",
+        "6", "7", "8"
+    ];
+})
+
+
+
+reset html design with bootsrap :
+
+        <div class="footer">
+            <button type="button" class="btn btn-danger mt-2" id="reset-btn">reset</button>
+        </div>
+
+css reset design code :
+
+.footer {
+    text-align: center;
+}
+
+#reset-btn {
+
+    background-color: blueviolet;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    border-color: #f8fafc;
+}
+
+#reset-btn:hover {
+    background-color: #63279a;
+}
